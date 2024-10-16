@@ -33,11 +33,13 @@ class MainApp extends StatelessWidget {
           itemCount: menu.length,
           itemBuilder: (BuildContext context, int index) {
             return Card(
-              child: Row(
+              child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Text(menu[index].name, style: const TextStyle(fontSize: 28)),
-                  Image.asset(menu[index].imgPath, width: 200, height: 150, fit: BoxFit.fill,)
+                  Flexible(
+                    child: Image.asset(menu[index].imgPath, width: 200, height: 150, fit: BoxFit.fill,)
+                  )
                 ],
               ),
             );
